@@ -1,0 +1,88 @@
+{
+  "restaurants": [
+    {
+      "id": "rest1",
+      "name": "Ember N Salt",
+      "address": "123 Bay Street, Melbourne",
+      "contactEmail": "info@ember.com",
+      "roomIds": ["room101", "room102"]
+    },
+    {
+      "id": "rest2",
+      "name": "Velvet Spoon",
+      "address": "55 Highpoint Ave, Melbourne",
+      "contactEmail": "bookings@velvet.com",
+      "roomIds": ["room201"]
+    }
+  ],
+  "rooms": [
+    {
+      "id": "room101",
+      "restaurantId": "rest1",
+      "name": "The Secret Garden",
+      "type": "rooftop",
+      "minCapacity": 4,
+      "maxCapacity": 12,
+      "minSpend": 500,
+      "currency": "AUD"
+    },
+    {
+      "id": "room102",
+      "restaurantId": "rest1",
+      "name": "The Grand Hall",
+      "type": "hall",
+      "minCapacity": 10,
+      "maxCapacity": 30,
+      "minSpend": 1200,
+      "currency": "AUD"
+    },
+    {
+      "id": "room201",
+      "restaurantId": "rest2",
+      "name": "The Wonder Place",
+      "type": "terrace",
+      "minCapacity": 6,
+      "maxCapacity": 20,
+      "minSpend": 800,
+      "currency": "AUD"
+    }
+  ],
+  "reservations": [
+    {
+      "id": "68ff55337381e26ead45212d",
+      "roomId": "room101",
+      "restaurantId": "rest1",
+      "dinerName": "Gary Dudeja",
+      "email": "gary@example.com",
+      "partySize": 8,
+      "reservationDate": "2025-11-05",
+      "startTime": "18:00",
+      "endTime": "20:00",
+      "status": "CONFIRMED"
+    },
+    {
+      "id": "68ff55337381e26ead45235f",
+      "roomId": "room102",
+      "restaurantId": "rest1",
+      "dinerName": "Jack Smith",
+      "email": "jack@example.com",
+      "partySize": 12,
+      "reservationDate": "2025-11-06",
+      "startTime": "19:30",
+      "endTime": "21:30",
+      "status": "CONFIRMED"
+    },
+    {
+      "id": "68ff55337381e26ead45276g",
+      "roomId": "room201",
+      "restaurantId": "rest2",
+      "dinerName": "John Robert",
+      "email": "john@example.com",
+      "partySize": 10,
+      "reservationDate": "2025-11-07",
+      "startTime": "17:00",
+      "endTime": "19:00",
+      "status": "CONFIRMED"
+    }
+  ]
+}

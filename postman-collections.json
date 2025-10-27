@@ -1,0 +1,121 @@
+{
+  "info": {
+    "name": "Private Dining Reservation System",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Restaurants",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/restaurants",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "restaurants"]
+        }
+      }
+    },
+    {
+      "name": "Get Rooms by Restaurant ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/restaurants/{{restaurantId}}/rooms",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "restaurants", "{{restaurantId}}", "rooms"]
+        }
+      }
+    },
+    {
+      "name": "Create Reservation",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"roomId\": \"room101\",\n  \"restaurantId\": \"rest1\",\n  \"dinerName\": \"Gary Dudeja\",\n  \"email\": \"gary@example.com\",\n  \"partySize\": 6,\n  \"reservationDate\": \"2025-11-05\",\n  \"startTime\": \"18:00\",\n  \"endTime\": \"20:00\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/reservations",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "reservations"]
+        }
+      }
+    },
+    {
+      "name": "Get Reservations by Email (Diner)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/reservations?email={{dinerEmail}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "reservations"],
+          "query": [
+            {
+              "key": "email",
+              "value": "{{dinerEmail}}"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get All Reservations (Staff)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/reservations/all",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "reservations", "all"]
+        }
+      }
+    },
+    {
+      "name": "Cancel Reservation by ID",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/reservations/{{reservationId}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "reservations", "{{reservationId}}"]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "restaurantId",
+      "value": "rest1"
+    },
+    {
+      "key": "reservationId",
+      "value": "replace_with_actual_id"
+    },
+    {
+      "key": "dinerEmail",
+      "value": "gary@example.com"
+    }
+  ]
+}

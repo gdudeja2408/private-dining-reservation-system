@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: private-dining-reservation
+  data:
+    mongodb:
+      database: private_dining_db
+      auto-index-creation: true
+server:
+  port: 8080
+
