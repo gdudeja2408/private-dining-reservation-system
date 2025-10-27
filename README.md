@@ -43,7 +43,7 @@ This version uses an **embedded in-memory MongoDB**, so no external database set
 
 #### Using Gradle
 ```
-./gradlew clean build
+./gradlew clean build -x test
 ```
 
 ---
@@ -72,7 +72,7 @@ Visit: [http://localhost:8080/api/restaurants](http://localhost:8080/api/restaur
 ### Test APIs
 Import APIs into **Postman** using the file: `postman-collections.json` (Import → Raw Text → Paste JSON)
 or
-Visit Swagger UI at: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+Visit Swagger UI 
 ---
 
 ## API Endpoints
