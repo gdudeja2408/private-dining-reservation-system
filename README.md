@@ -70,7 +70,9 @@ Expected console output:
 Visit: [http://localhost:8080/api/restaurants](http://localhost:8080/api/restaurants)
 
 ### Test APIs
-Import APIs into **Postman** using the file: `postman-collections.json` (Import → Raw Text → Paste JSON)
+Import APIs into **Postman** using the file: `postman-collections.json` 
+(Import → Raw Text → Paste JSON Content) 
+
 or
 Visit Swagger UI 
 ---
