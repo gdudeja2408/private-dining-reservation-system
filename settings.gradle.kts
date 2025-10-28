@@ -1,1 +1,1 @@
-rootProject.name = "private-dining-reservation"
+rootProject.name = "private-dining-reservation-system"
